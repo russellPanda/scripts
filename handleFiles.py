@@ -7,7 +7,7 @@
 path1="./text1"
 path2="./text2"
 
-#%%
+
 from os import path
 import sys
 import filecmp
