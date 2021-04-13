@@ -24,7 +24,6 @@ class HandleExecl():
         row_tuple = namedtuple(target_sheet, columns)
         return [row_tuple(*i) for i in fill_data.values]
 
-
 execl_path = r'smoke_data.xlsx'
 target_sheet = r'config'
 
