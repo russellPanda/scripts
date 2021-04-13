@@ -19,9 +19,6 @@ class CustomCollector(object):
         g.add_metric(["instance01.us.west.local"], 20)
         yield g
 
-        c = CounterMetricFamily("HttpRequests", 'Help text', labels=['app'])
-        c.add_metric(["example"], 2000)
-        yield c
 
 
 if __name__ == '__main__':

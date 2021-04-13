@@ -5,7 +5,7 @@
 # @File    : testPrometheusClient.py
 
 import psutil
-from prometheus_client.core import GaugeMetricFamily, REGISTRY, CounterMetricFamily
+from prometheus_client.core import GaugeMetricFamily, REGISTRY
 from prometheus_client import make_wsgi_app
 from flask import Flask
 from collections import namedtuple
@@ -24,7 +24,7 @@ class CustomCollector(object):
         pass
 
     def collect(self):
-        cpu_metric=GaugeMetricFamily("CPUUsage", 'get data from psutil', labels=['cpu_number'])
+        cpu_metric=GaugeMetricFamily("cpu_Usage", 'get data from psutil', labels=['cpu_number'])
         for mes in cpusPercent():
             cpu_metric.add_metric([str(mes.number)],mes.percent)
         yield cpu_metric

@@ -10,7 +10,6 @@ from pprint import pprint
 
 
 
-
 #%%
 print("逻辑cpu:",psutil.cpu_count()) # 逻辑cpu数量
 print("cpu数量:",psutil.cpu_count(logical=False))
