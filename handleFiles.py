@@ -3,6 +3,7 @@
 # @File : handlefile.py
 
 # -*- coding: utf-8 -*-
+import os.path
 
 path1="./text1"
 path2="./text2"
@@ -20,16 +21,11 @@ from difflib import HtmlDiff,unified_diff
 def is_dir(dir_path:str):
     if not path.isdir(dir_path):
         print(f'{dir_path} is not a dir')
-        # sys.exit(0)
+
 def is_file(file_path:str):
     if path.isfile(file_path):
         print(f'{file_path} is not a file')
-        # sys.exit(0)
 
-def read_filelines(file_path:str):
-    with open(file_path,'r',encoding='utf-8') as f:
-        file=f.readlines()
-    return file
 
 def diff_dirs(dir_path1:str,dir_path2:str):
     is_dir(dir_path1)
@@ -39,22 +35,50 @@ def diff_dirs(dir_path1:str,dir_path2:str):
     print(cmp.report_full_closure())
 
 
-# 比较文件内容
 
 
-def diff_files(path1:str,path2:str):
-    file1 = read_filelines(path1)
-    file2 = read_filelines(path2)
 
-    result = unified_diff(file1, file2)
-    sys.stdout.writelines(result)
+class handlefile:
 
-def diff_files_Html(path1:str,path2:str,html_path:str):
-    htmlDiff = HtmlDiff()
-    file1 = read_filelines(path1)
-    file2 = read_filelines(path2)
-    with open(html_path, 'w', encoding='utf-8') as f:
-        f.write(htmlDiff.make_file(file1, file2))
+    def __init__(self,path:str):
+        self.path=path
+        if not os.path.isfile(self.path):
+            print(f'{self.path} is not a file')
+
+    def read(self):
+        with open(self.path,'r',encoding='utf-8') as f:
+            file_content=f.read()
+        return file_content
+
+    def read_lines(self,path=None):
+        if path is not None:
+            file_path=path
+        else:
+            file_path=self.path
+
+        with open(file_path,'r',encoding='utf-8') as f:
+            lines=f.readlines()
+        return lines
+
+    def empty_file(self):
+        with open(self.path,'rw',encoding='utf-8') as f:
+            f.truncate()
+
+
+    def diff_files(self,path:str):
+        file1= self.read_lines()
+        file2=self.read_lines()
+        result = unified_diff(file1, file2)
+        sys.stdout.writelines(result)
+        return result
+
+    def diff_files_asHtml(self,path:str,html_path:str):
+        htmlDiff = HtmlDiff()
+        file1=self.read_lines(self.path)
+        file2=self.read_lines(path)
+        with open(html_path, 'w', encoding='utf-8') as f:
+            f.write(htmlDiff.make_file(file1, file2))
+
 
 
 
