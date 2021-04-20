@@ -7,7 +7,7 @@ from multiprocessing import Process,Pool,cpu_count
 import time
 import os
 
-#%%
+
 def long_time_task(i):
     print(f'子进程:{os.getpid()}-任务:{i}')
     time.sleep(2)

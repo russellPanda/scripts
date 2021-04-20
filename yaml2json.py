@@ -1,3 +1,11 @@
+#!/usr/bin/env python
+
+# @Time    :   2021/04/18 22:51:02
+# @Author  :   russell 
+# @File    :   yaml2json.py
+
+# -*- encoding: utf-8 -*-
+
 import yaml
 import json
 
