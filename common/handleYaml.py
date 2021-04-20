@@ -11,17 +11,15 @@ import yaml
 from handlefile import read_file
 from attrdict import AttrDict  # 按照属性访问字典
 
-from pprint import pprint
-
 
 def read_yaml(path: str) -> list:
     content = read_file(path)
-    yaml_datas = yaml.load_all(content)
+    yaml_data = yaml.load_all(content)
 
-    return [AttrDict(data) for data in yaml_datas]
+    return [AttrDict(data) for data in yaml_data]
 
 
-def write_yaml(full_data: dict, path: str):
+def write_yaml(full_data: list, path: str):
     with open(path, 'a+', encoding='utf-8') as f:
         f.write('---\n')
-        yaml.dump(full_data, f)
+        yaml.dump_all(full_data, f)

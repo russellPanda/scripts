@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="278c2903-ec4c-492d-82aa-ee8f4dd6b926" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/scripts.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scripts.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/handleExecl.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/handleFiles.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlerProcess.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlerProcess.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaml2json.py" beforeDir="false" afterPath="$PROJECT_DIR$/yaml2json.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/handleYaml.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/handleYaml.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/test3.yml" beforeDir="false" afterPath="$PROJECT_DIR$/common/test3.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
