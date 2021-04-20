@@ -9,16 +9,15 @@ from configparser import ConfigParser
 from pprint import pprint
 import json
 
+# ini_path = r'test.ini'
+# js_path = r'test.js'
 
-ini_path=r'test.ini'
-js_path=r'test.js'
 
-
-def ini2json(inipath:str,jspath:str):
-    confP=ConfigParser()
-    confP.read(inipath)
-    d={}
-    for session in confP.sections():
-        d[session]=confP.items(session)
-    with open(jspath,'w+',encoding='utf-8') as f:
-        json.dump(d,f)
+def ini2json(ini_path: str, js_path: str):
+    conf = ConfigParser()
+    conf.read(ini_path)
+    d = {}
+    for session in conf.sections():
+        d[session] = conf.items(session)
+    with open(js_path, 'w+', encoding='utf-8') as f:
+        json.dump(d, f)

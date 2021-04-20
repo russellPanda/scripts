@@ -7,9 +7,7 @@
 # -*- encoding: utf-8 -*-
 
 
-
-
-from pandas import ExcelFile,DataFrame
+from pandas import ExcelFile, DataFrame
 from collections import namedtuple
 
 
@@ -21,7 +19,6 @@ class HandleExecl():
         self.sheets = self.execl.sheet_names
 
     def read_sheet(self, sheet: str):
-
         data = self.execl.parse(sheet)
         fill_data = data.fillna(method='pad')
         columns = fill_data.columns.to_list()
@@ -31,8 +28,6 @@ class HandleExecl():
 
     def write_sheet(self):
         pass
-
-
 
 # execl_path = r'smoke_data.xlsx'
 # target_sheet = r'config'
