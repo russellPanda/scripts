@@ -16,20 +16,17 @@ class HandleYaml:
 
     def __init__(self, path=None) -> None:
         if path is None:
-            self.data=[]
+            self.data = []
         else:
-            content = read_file(path)
-            yaml_data = yaml.safe_load_all(content)
-            self.data=[ AttrDict(data) for data in yaml_data ]
+            self.data = HandleYaml.load_yaml(path)
 
-
-    def load_yaml(self,path: str) -> list:
+    @staticmethod
+    def load_yaml(path: str) -> list:
         content = read_file(path)
         yaml_data = yaml.safe_load_all(content)
-        self.data= [ AttrDict(data) for data in yaml_data ]
-
+        return [data for data in yaml_data]
 
     def write_yaml(self, path: str):
         with open(path, 'a+', encoding='utf-8') as f:
             f.write('---\n')
-            yaml.dump_all([ dict(content) for content in self.data ], f)
+            yaml.dump_all([dict(content) for content in self.data], f)

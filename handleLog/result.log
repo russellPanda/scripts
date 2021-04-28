@@ -1,0 +1,40 @@
+2021-04-28 10:39:47,256 - __main__ - INFO - Start
+2021-04-28 10:39:47,257 - __main__ - WARNING - Something maybe fail.
+2021-04-28 10:39:47,257 - __main__ - ERROR - Faild to get result
+Traceback (most recent call last):
+  File "testLog.py", line 29, in <module>
+    result = 10 / 0
+ZeroDivisionError: division by zero
+2021-04-28 10:39:47,260 - __main__ - INFO - Finished
+2021-04-28 10:41:31,056 - testModule - INFO - Start
+2021-04-28 10:41:31,056 - testModule - WARNING - Something maybe fail.
+2021-04-28 10:41:31,056 - testModule - ERROR - Faild to get result
+Traceback (most recent call last):
+  File "testLog.py", line 29, in <module>
+    result = 10 / 0
+ZeroDivisionError: division by zero
+2021-04-28 10:41:31,059 - testModule - INFO - Finished
+2021-04-28 10:42:43,930 - INFO - testModule - Start
+2021-04-28 10:42:43,930 - WARNING - testModule - Something maybe fail.
+2021-04-28 10:42:43,930 - ERROR - testModule - Faild to get result
+Traceback (most recent call last):
+  File "testLog.py", line 29, in <module>
+    result = 10 / 0
+ZeroDivisionError: division by zero
+2021-04-28 10:42:43,932 - INFO - testModule - Finished
+2021-04-28 10:43:23,515 - INFO - testModule - Start
+2021-04-28 10:43:23,515 - WARNING - testModule - Something maybe fail.
+2021-04-28 10:43:23,516 - ERROR - testModule - Faild to get result
+Traceback (most recent call last):
+  File "testLog.py", line 29, in <module>
+    result = 10 / 0
+ZeroDivisionError: division by zero
+2021-04-28 10:43:23,518 - INFO - testModule - Finished
+2021-04-28 10:48:16,177 - INFO - testModule - Start
+2021-04-28 10:48:16,177 - WARNING - testModule - Something maybe fail.
+2021-04-28 10:48:16,177 - ERROR - testModule - Faild to get result
+Traceback (most recent call last):
+  File "testLog.py", line 29, in <module>
+    result = 10 / 0
+ZeroDivisionError: division by zero
+2021-04-28 10:48:16,180 - INFO - testModule - Finished

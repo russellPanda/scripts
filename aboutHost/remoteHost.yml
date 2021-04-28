@@ -1,0 +1,7 @@
+---
+host: 10.10.32.96
+port: 22
+user: root
+connect_timeout: 5
+connect_kwargs :
+  password: Onceas#11

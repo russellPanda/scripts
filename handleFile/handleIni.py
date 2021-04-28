@@ -3,7 +3,7 @@ from configparser import ConfigParser
 from collections import defaultdict
 
 
-class HnadleIni:
+class HandleIni:
 
     def __init__(self, path=None) -> None:
         '''
