@@ -15,3 +15,17 @@ cursor.close()
 conn.commit()
 
 conn.close()
+
+
+from testDB.testSQLAlchemy import dbconnect,User
+
+@dbconnect
+def addd(session):
+    new = User(id='5', name='Basdasdbb')
+    session.add(new)
+
+
+
+addd()
+
+

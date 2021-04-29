@@ -14,7 +14,6 @@ class FilterModule(object):
         a_new_variable = a_variable + ' - ' + another_variable + ' - ' + yet_another_variable
         return a_new_variable
 
-
 # ---
 # - hosts: localhost
 #   tasks:

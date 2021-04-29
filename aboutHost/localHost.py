@@ -151,7 +151,7 @@ def proc_info_filter(proc: Process, filter_list: list):
 
 
 def all_proc_info_filter(filter_list: list) -> list:
-    """获取过略后的进程信息
+    """获取过滤后的进程信息
     :param filter_list: ["name", "exe", "cmdline",.....]
     :return: [process(name='bash', exe='/usr/bin/bash', cmdline=['-bash']),]
     """
