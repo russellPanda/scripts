@@ -17,3 +17,4 @@ try:
 except Exception:
     logger.error('Faild to get result', exc_info=True)
 logger.info('Finished')
+

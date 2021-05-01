@@ -7,6 +7,7 @@
 
 # sqlite:////absolute/path/to/foo.db
 
+from functools import wraps
 from sqlalchemy import Column, String, create_engine
 from sqlalchemy.pool import QueuePool
 from sqlalchemy.orm import sessionmaker
@@ -18,6 +19,7 @@ engine = create_engine('sqlite:///test.db', pool_size=20, max_overflow=0, poolcl
 #
 Base = declarative_base()
 
+
 # table
 class User(Base):
     __tablename__ = 'user'
@@ -28,8 +30,10 @@ class User(Base):
 # Base.metadata.create_all(engine)
 
 
-def dbconnect(func):
-    def inner(*args, **kwargs):
+def db_connect(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        global engine
         DBsession = sessionmaker(bind=engine)
         ses = DBsession()
         try:
@@ -41,17 +45,15 @@ def dbconnect(func):
             # log
         finally:
             ses.close()
-    return inner
+
+    return wrapper
 
 
 
-@dbconnect
+@db_connect
 def add(session):
-    new = User(id='4', name='Basdasdbb')
+    new = User(id='29', name='asdsadBasdasdbb')
     session.add(new)
 
 
-
 add()
-
-
